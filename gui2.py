@@ -1,7 +1,7 @@
 from tkinter import *
-from numpy import left_shift
+#from numpy import left_shift
 
-from sqlalchemy import column
+#from sqlalchemy import column
 
 import pandas as pd
 
