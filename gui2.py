@@ -7,6 +7,7 @@ from numpy import e
 import pandas as pd
 
 import matplotlib.pyplot as plt
+from regex import A, B
 
 #plt.plot([1, 2, 3, 4])
 
@@ -18,8 +19,8 @@ data = {'name' : ['Mark', 'Jane', 'Chris', 'Ryan'],
 
 
 
-plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
-plt.axis([0, 6, 0, 20])
+#plt.plot([1, 2, 3, 4], [1, 4, 9, 16], 'ro')
+#plt.axis([0, 6, 0, 20])
 
 
 top = Tk()
@@ -54,7 +55,7 @@ edit1.grid(row = 2, column = 0, rowspan=10, sticky=W)
 #display.pack()
 #display.grid(row = 6, column = 1)
 
-label1 = Label(top, width=40, height=8, text = "출력")
+label1 = Label(top, width=60, height=20, text = "출력")
 label1.configure(background="white")
 #label1.place(x = 5, y = 320)
 label1.grid(row = 14, column=0)
@@ -76,13 +77,45 @@ btn.grid(row=12, column=0, sticky=W)
 def btncmd2():
     df = pd.DataFrame(data)
     label1.configure(text=str(df), anchor=W)
-    plt.show()
+    #df.plot(kind = 'kde')
+    #plt.show()
 
 btn1 = Button(top, text="데이터 출력", command=btncmd2)
 #btn.pack()
 #btn1.place(x = 55, y = 220)
 btn1.grid(row=12, column=0, sticky=E)
 
+
+def sel_sort(a):
+    n = len(a)
+    #v=0
+    k = []
+    #k.append([])
+    for i in range(0, n - 1):
+        min_idx = i
+        b =[]
+        for j in range(i + 1, n):
+            if a[j] < a[min_idx]:
+                min_idx = j
+        a[i], a[min_idx] = a[min_idx], a[i]
+        print(a)     # 정렬 과정 출력하기
+        #b = a.copy()
+        #k.append(b)
+        k.append(a.copy())
+        #print(k)
+        #v = v+1
+    df = pd.DataFrame(k)
+    label1.configure(text=str(df), anchor=W)
+
+def btncmd3():
+    d = [2,6, 4,9, 5,8,12, 1, 3]
+    print(d)
+    sel_sort(d)
+
+
+btn2 = Button(top, text="선택정렬", command=btncmd3)
+btn2.grid(row=12, column=1, sticky=E)
+ 
 
 #display.grid(row = 0, column = 0)
 #chkbox.grid(row=3, column=0)
