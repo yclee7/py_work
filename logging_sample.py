@@ -6,9 +6,11 @@ from PIL import ImageGrab
 
 
 if platform.platform().startswith('Windows'):
-    logging_file = os.path.join(os.getenv('HOMEDRIVE'),
-                                os.getenv('HOMEPATH'),
-                                'test.log')
+    #logging_file = os.path.join(os.getenv('HOMEDRIVE'),
+    #                            os.getenv('HOMEPATH'),
+    #                           'test.log')
+    logging_file = 'D:\\91.ProgramSpace\\13.Python_Workspace\\test.log'
+
 else:
     logging_file = os.path.join(os.getenv('HOME'),
                                 'test.log')

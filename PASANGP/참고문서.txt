@@ -1,0 +1,24 @@
+카카오 API 용
+
+개발자 사이트 : https://developers.kakao.com/
+소스 사이트 : https://drive.google.com/drive/folders/10KXyPrJ_KEesvAvjnMpx1DS_md7gaN6H
+
+
+앱 ID : 805143
+앱이름 : myTestApp
+
+REST API키 : c40e6d5de6ff29c5bd78935ff33e4451
+
+인증코드 가져오는 URL :  크롬에서 시크릿 모드로 호출
+https://kauth.kakao.com/oauth/authorize?client_id=c40e6d5de6ff29c5bd78935ff33e4451&response_type=code&redirect_uri=https://localhost.com
+
+
+인증코드값 :
+8XoR3Bh8LDl_EXL5Ap0ChXCUqix9cvtyVIQm6PI5fo5c42uxLVj7N04EqmCM8_zbOoZQ9wopcSEAAAGDr8j7Bw
+
+토큰 값 :
+Bp1ZHqRBGmdw_tyZEQixRC4eF-AprIiU3TlMLOkZCj11WgAAAYOnK72N
+
+
+{'access_token': 'Bp1ZHqRBGmdw_tyZEQixRC4eF-AprIiU3TlMLOkZCj11WgAAAYOnK72N', 'token_type': 'bearer', 'refresh_token': 'CvSc_vuUMfDNg2RwsaDQjOM-9JpA-zL9FXRiheA4Cj11WgAAAYOnK72L', 'expires_in': 21599, 'scope': 'account_email talk_message profile_nickname', 'refresh_token_expires_in': 5183999}
+
