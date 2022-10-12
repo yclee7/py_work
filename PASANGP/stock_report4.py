@@ -10,6 +10,8 @@ from pptx.util import Inches # 사진, 표 등을 그리기 위해
 
 
 
+
+
 # %matplotlib inline은 jupyter notebook 사용자 용 - jupyter notebook 내에 그래프가 그려지게 한다.
 #%matplotlib inline
 
