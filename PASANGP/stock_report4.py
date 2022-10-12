@@ -8,7 +8,7 @@ from pptx import Presentation # 라이브러리
 from pptx.util import Inches # 사진, 표 등을 그리기 위해
 
 
-
+# git server 에서 수정
 
 # git commit Test
 
